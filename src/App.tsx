@@ -7,6 +7,7 @@ import { HowItWorks } from './components/HowItWorks';
 import { MessageSection } from './components/MessageSection';
 import { Screenshots } from './components/Screenshots';
 import { PrivacyPage } from './components/PrivacyPage';
+import { AccountDeletionPage } from './components/AccountDeletionPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Screenshots />
       <Disclaimer />
       <PrivacyPage />
+      <AccountDeletionPage />
       <Contact />
       <Footer />
     </>

@@ -6,6 +6,7 @@ import { Hero } from './components/Hero';
 import { HowItWorks } from './components/HowItWorks';
 import { MessageSection } from './components/MessageSection';
 import { Screenshots } from './components/Screenshots';
+import { PrivacyPage } from './components/PrivacyPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <MessageSection />
       <Screenshots />
       <Disclaimer />
+      <PrivacyPage />
       <Contact />
       <Footer />
     </>

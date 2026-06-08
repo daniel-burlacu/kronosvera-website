@@ -82,8 +82,8 @@ export const AccountDeletionPage = () => {
                             <Stack spacing={1.5} sx={{ mt: 2 }}>
                                 <Typography variant="body1">
                                     Email:{' '}
-                                    <Link href="mailto:daniel.burlacu1983@yahoo.se">
-                                        daniel.burlacu1983@yahoo.se
+                                    <Link href="mailto:daniel[dot]burlacu1983[at]yahoo[dot]se">
+                                        daniel[dot]burlacu1983[at]yahoo[dot]se
                                     </Link>
                                 </Typography>
 
@@ -105,7 +105,7 @@ export const AccountDeletionPage = () => {
 
                             <Button
                                 variant="contained"
-                                href="mailto:daniel.burlacu1983@yahoo.se?subject=KronosVera%20Account%20Deletion%20Request&body=Hello%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20deletion%20of%20my%20KronosVera%20account.%0D%0A%0D%0AEmail%20used%20for%20KronosVera%3A%20%0D%0A%0D%0AThank%20you."
+                                href="mailto:daniel[dot]burlacu1983[at]yahoo[dot]se?subject=KronosVera%20Account%20Deletion%20Request&body=Hello%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20deletion%20of%20my%20KronosVera%20account.%0D%0A%0D%0AEmail%20used%20for%20KronosVera%3A%20%0D%0A%0D%0AThank%20you."
                                 sx={{ mt: 3 }}
                             >
                                 Request account deletion by email

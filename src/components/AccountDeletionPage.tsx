@@ -13,6 +13,8 @@ import {
 export const AccountDeletionPage = () => {
     return (
         <Box
+            id="account-deletion"
+            component="section"
             sx={{
                 minHeight: '100vh',
                 backgroundColor: '#ffffff',

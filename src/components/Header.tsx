@@ -10,6 +10,7 @@ export function Header() {
           </Box>
           <Stack direction="row" spacing={3} sx={{ display: { xs: 'none', md: 'flex' }, color: 'text.secondary', fontWeight: 700 }}>
             <Box component="a" href="#how-it-works">How it works</Box>
+            <Box component="a" href="#roadmap">Coming next</Box>
             <Box component="a" href="#privacy">Privacy</Box>
             <Box component="a" href="#screens">Screens</Box>
             <Box component="a" href="#account-deletion">Account Deletion</Box>

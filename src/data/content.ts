@@ -4,6 +4,9 @@ import NotificationsActiveRoundedIcon from '@mui/icons-material/NotificationsAct
 import TrackChangesRoundedIcon from '@mui/icons-material/TrackChangesRounded';
 import InsightsRoundedIcon from '@mui/icons-material/InsightsRounded';
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
+import PhoneIphoneRoundedIcon from '@mui/icons-material/PhoneIphoneRounded';
+import SyncRoundedIcon from '@mui/icons-material/SyncRounded';
+import BluetoothConnectedRoundedIcon from '@mui/icons-material/BluetoothConnectedRounded';
 
 export const appSections = [
   {
@@ -34,6 +37,30 @@ export const screenshots = [
   { title: 'AI Overview', image: '/images/ai-overview.png', text: 'Concise awareness-focused explanations based on the user’s lifestyle snapshot.' },
   { title: 'Insights', image: '/images/insights.png', text: 'Trends and patterns that help users understand where small changes may matter.' },
   { title: 'Quick Views', image: '/images/quick-views.png', text: 'Fast access to the parts of the app that matter during the day.' },
+];
+
+export const upcomingFeatures = [
+  {
+    icon: PhoneIphoneRoundedIcon,
+    title: 'iOS application',
+    stage: 'Next release',
+    text: 'A native iOS experience is planned so users can check their KronosVera score and daily signals directly from their iPhone.',
+    points: ['iPhone access', 'Daily score', 'Quick check-ins'],
+  },
+  {
+    icon: SyncRoundedIcon,
+    title: 'Samsung Health connection',
+    stage: 'Planned integration',
+    text: 'KronosVera will connect with Samsung Health to pull activity, sleep, and stress signals, reducing the need for users to enter those values manually.',
+    points: ['Sports activity', 'Sleep signals', 'Stress signals'],
+  },
+  {
+    icon: BluetoothConnectedRoundedIcon,
+    title: 'Timeline Bracelet',
+    stage: 'Concept feature',
+    text: 'A Bluetooth bracelet concept will use neon color feedback so the wearable can reflect the user\'s current health score at a glance.',
+    points: ['Bluetooth wearable', 'Neon feedback', 'Score color'],
+  },
 ];
 
 export const principles = [

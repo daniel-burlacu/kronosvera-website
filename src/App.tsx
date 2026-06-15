@@ -6,6 +6,7 @@ import { Hero } from './components/Hero';
 import { HowItWorks } from './components/HowItWorks';
 import { MessageSection } from './components/MessageSection';
 import { Screenshots } from './components/Screenshots';
+import { UpcomingFeatures } from './components/UpcomingFeatures';
 import { PrivacyPage } from './components/PrivacyPage';
 import { AccountDeletionPage } from './components/AccountDeletionPage';
 
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <HowItWorks />
       <MessageSection />
+      <UpcomingFeatures />
       <Screenshots />
       <Disclaimer />
       <PrivacyPage />

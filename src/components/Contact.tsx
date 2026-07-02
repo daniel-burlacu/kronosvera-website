@@ -1,11 +1,77 @@
-import { Box, Button, Container, Paper, Stack, Typography } from '@mui/material';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import ChatRoundedIcon from '@mui/icons-material/ChatRounded';
+import {
+  Box,
+  Button,
+  Container,
+  Paper,
+  Stack,
+  Typography,
+} from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ChatRoundedIcon from "@mui/icons-material/ChatRounded";
 
 export function Contact() {
   return (
     <Box id="contact" component="section" sx={{ py: { xs: 8, md: 11 } }}>
-      <Container maxWidth="md"><Paper className="contact-box"><Box component="img" src="/images/logo-full.png" alt="KronosVera" className="contact-logo" /><Typography variant="h2" sx={{ fontSize: { xs: 36, md: 52 }, mt: 3 }}>Currently in development and testing.</Typography><Typography color="text.secondary" sx={{ fontSize: 18, lineHeight: 1.8, maxWidth: 720, mx: 'auto', mt: 2 }}>KronosVera is still being improved. If you want to ask about the project, testing, feedback, or collaboration, you can contact me directly.</Typography><Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center" sx={{ mt: 4 }}><Button href="https://www.linkedin.com/in/daniel-burlacu-3879a689/" target="_blank" rel="noreferrer" variant="contained" size="large" startIcon={<LinkedInIcon />} sx={{ borderRadius: 999, px: 3, background: '#0a66c2' }}>LinkedIn</Button><Button variant="outlined" size="large" startIcon={<ChatRoundedIcon />} sx={{ borderRadius: 999, px: 3, borderColor: 'rgba(6,24,38,0.2)' }}>Discord: daniel.burlacu</Button></Stack></Paper></Container>
+      <Container maxWidth="md">
+        <Paper className="contact-box">
+          <Box
+            component="img"
+            src="/images/logo-full.png"
+            alt="KronosVera"
+            className="contact-logo"
+          />
+          <Typography variant="h2" sx={{ fontSize: { xs: 36, md: 52 }, mt: 3 }}>
+            Currently in development and testing.
+          </Typography>
+          <Typography
+            color="text.secondary"
+            sx={{
+              fontSize: 18,
+              lineHeight: 1.8,
+              maxWidth: 720,
+              mx: "auto",
+              mt: 2,
+            }}
+          >
+            KronosVera is still being improved. If you want to ask about the
+            project, testing, feedback, or collaboration, you can contact me
+            directly.
+          </Typography>
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={2}
+            justifyContent="center"
+            sx={{ mt: 4 }}
+          >
+            <Button
+              href="https://www.linkedin.com/in/daniel-burlacu-3879a689/"
+              target="_blank"
+              rel="noreferrer"
+              variant="contained"
+              size="large"
+              startIcon={<LinkedInIcon />}
+              sx={{ borderRadius: 999, px: 3, background: "#0a66c2" }}
+            >
+              LinkedIn
+            </Button>
+            <Button
+              href="https://discord.gg/ThTENebZP"
+              target="_blank"
+              rel="noreferrer"
+              variant="outlined"
+              size="large"
+              startIcon={<ChatRoundedIcon />}
+              sx={{
+                borderRadius: 999,
+                px: 3,
+                borderColor: "rgba(6,24,38,0.2)",
+              }}
+            >
+              Discord: KronosVera Community
+            </Button>
+          </Stack>
+        </Paper>
+      </Container>
     </Box>
   );
 }

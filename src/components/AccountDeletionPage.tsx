@@ -155,7 +155,7 @@ export const AccountDeletionPage = () => {
                     <Divider />
 
                     <Typography variant="body2" color="text.secondary">
-                        KronosVera is currently in development and testing. KronosVera is
+                        KronosVera is currently waiting to be released to production. KronosVera is
                         not a medical service and does not provide medical advice, diagnosis,
                         or treatment.
                     </Typography>

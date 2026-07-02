@@ -37,6 +37,26 @@ export function Contact() {
             project, testing, feedback, or collaboration, you can contact me
             directly.
           </Typography>
+          <Typography
+            color="text.secondary"
+            sx={{
+              fontSize: 16,
+              lineHeight: 1.9,
+              maxWidth: 680,
+              mx: "auto",
+              mt: 3,
+              px: 2,
+              py: 2.5,
+              borderRadius: 3,
+              background: "rgba(88,101,242,0.07)",
+              border: "1px solid rgba(88,101,242,0.18)",
+            }}
+          >
+            💬 <strong>Join our Discord community!</strong> We're building
+            KronosVera together with you. Share your ideas, tell us what
+            features matter most, and help shape the direction of the app.
+            Every request is heard — if you want it, we'll build it.
+          </Typography>
           <Stack
             direction={{ xs: "column", sm: "row" }}
             spacing={2}

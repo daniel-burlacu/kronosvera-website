@@ -15,7 +15,7 @@ export function Hero() {
                 <Chip icon={<SelfImprovementRoundedIcon />} label="Lifestyle awareness" className="soft-chip" />
               </Stack>
               <Typography variant="h1" sx={{ fontSize: { xs: 52, sm: 70, md: 86 }, lineHeight: 0.94 }}>
-                Your life.<Box component="span" className="gradient-text" sx={{ display: 'block' }}>Your time.</Box>Your future.
+                Your journey.<Box component="span" className="gradient-text" sx={{ display: 'block' }}>Your choices.</Box>Your future.
               </Typography>
               <Typography variant="h5" color="text.secondary" sx={{ maxWidth: 640, lineHeight: 1.55 }}>
                 KronosVera is a lifestyle awareness app built around one simple idea: time is precious, and the way we live today can have real consequences later.

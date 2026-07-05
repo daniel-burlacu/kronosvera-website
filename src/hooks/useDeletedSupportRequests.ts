@@ -116,7 +116,7 @@ export const useDeletedSupportRequests = ({
     }
 
     void reload();
-  }, [enabled, getAccessToken]);
+  }, [enabled, reload]);
 
   useEffect(() => {
     if (!enabled) {

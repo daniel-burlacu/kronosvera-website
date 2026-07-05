@@ -158,7 +158,7 @@ export const useSupportInbox = ({
     }
 
     void loadRequests();
-  }, [activeStatus, enabled, getAccessToken]);
+  }, [enabled, loadRequests]);
 
   useEffect(() => {
     if (!enabled) {

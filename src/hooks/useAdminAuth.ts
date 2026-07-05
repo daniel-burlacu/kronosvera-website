@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   onAuthStateChanged,
   signInWithPopup,
@@ -129,7 +129,7 @@ export const useAdminAuth = (): AdminAuthState => {
     return () => unsubscribe();
   }, []);
 
-  const handleSignIn = async (): Promise<void> => {
+  const handleSignIn = useCallback(async (): Promise<void> => {
     const auth = getFirebaseAuth();
     if (!auth) {
       setState({
@@ -151,9 +151,9 @@ export const useAdminAuth = (): AdminAuthState => {
         status: "error",
       }));
     }
-  };
+  }, []);
 
-  const handleSignOut = async (): Promise<void> => {
+  const handleSignOut = useCallback(async (): Promise<void> => {
     const auth = getFirebaseAuth();
     if (!auth) {
       setState({
@@ -172,16 +172,16 @@ export const useAdminAuth = (): AdminAuthState => {
       message: null,
       status: "signed_out",
     });
-  };
+  }, []);
 
-  const getAccessToken = async (): Promise<string> => {
+  const getAccessToken = useCallback(async (): Promise<string> => {
     const auth = getFirebaseAuth();
     const user = auth?.currentUser;
     if (!user) {
       throw new Error("Admin authentication token is unavailable.");
     }
     return user.getIdToken();
-  };
+  }, []);
 
   return {
     ...state,

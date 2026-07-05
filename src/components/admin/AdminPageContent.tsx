@@ -12,10 +12,21 @@ import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import GoogleIcon from "@mui/icons-material/Google";
 import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
-import { Link as RouterLink } from "react-router-dom";
-
 import type { AdminUserSession } from "../../lib/admin-api";
 import type { AdminAuthStatus } from "../../hooks/useAdminAuth";
+
+const resolvePublicSiteUrl = (): string => {
+  if (typeof window === "undefined") {
+    return "/";
+  }
+
+  const host = window.location.hostname.toLowerCase();
+  if (host === "kronosvera.xyz") {
+    return "https://www.kronosvera.xyz/";
+  }
+
+  return "/";
+};
 
 type AdminPageContentProps = {
   adminUser?: AdminUserSession;
@@ -80,8 +91,8 @@ function AdminShellFrame({
               >
                 {actions}
                 <Button
-                  component={RouterLink}
-                  to="/"
+                  component="a"
+                  href={resolvePublicSiteUrl()}
                   color="inherit"
                   startIcon={<ArrowBackRoundedIcon />}
                 >

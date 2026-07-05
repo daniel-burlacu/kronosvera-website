@@ -78,9 +78,13 @@ export const useDeletedSupportRequests = ({
     deletedTicketCount: number;
   } | null>(null);
 
-  const reload = useCallback(async (): Promise<void> => {
-    setListLoading(true);
-    setListError(null);
+  const reload = useCallback(
+    async (options?: { silent?: boolean }): Promise<void> => {
+      const silent = options?.silent ?? false;
+      if (!silent) {
+        setListLoading(true);
+      }
+      setListError(null);
     try {
       const token = await getAccessToken();
       const nextRequests = await getSupportRequests(token, {
@@ -99,9 +103,13 @@ export const useDeletedSupportRequests = ({
           : "Failed to load deleted support requests.",
       );
     } finally {
-      setListLoading(false);
+      if (!silent) {
+        setListLoading(false);
+      }
     }
-  }, [getAccessToken]);
+    },
+    [getAccessToken],
+  );
 
   useEffect(() => {
     if (!enabled) {
@@ -124,7 +132,7 @@ export const useDeletedSupportRequests = ({
     }
 
     const timer = setInterval(() => {
-      void reload();
+      void reload({ silent: true });
     }, DELETED_SUPPORT_POLL_INTERVAL_MS);
 
     return () => {

@@ -181,7 +181,7 @@ export function SupportTicketDetail({
 
   if (loading) {
     return (
-      <Paper variant="outlined" sx={{ borderRadius: 4, p: 3.5 }}>
+      <Paper variant="outlined" sx={{ borderRadius: 2, p: 3 }}>
         <Typography color="text.secondary">
           Loading support request detail…
         </Typography>
@@ -195,7 +195,7 @@ export function SupportTicketDetail({
 
   if (!detail) {
     return (
-      <Paper variant="outlined" sx={{ borderRadius: 4, p: 3.5 }}>
+      <Paper variant="outlined" sx={{ borderRadius: 2, p: 3 }}>
         <Typography color="text.secondary">
           Select a support request to view the full conversation.
         </Typography>
@@ -206,7 +206,7 @@ export function SupportTicketDetail({
   const isDeleted = deletedMode || Boolean(detail.deletedAt);
 
   return (
-    <Paper variant="outlined" sx={{ borderRadius: 4, p: 3.5 }}>
+    <Paper variant="outlined" sx={{ borderRadius: 2, p: 3 }}>
       <Stack spacing={3}>
         <Stack direction={{ xs: "column", md: "row" }} spacing={1.5}>
           <Chip color="primary" label={supportStatusLabel[detail.status]} />

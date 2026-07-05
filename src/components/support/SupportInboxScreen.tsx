@@ -42,7 +42,7 @@ export function SupportInboxScreen({
       />
 
       <Stack direction={{ xs: "column", lg: "row" }} spacing={2.5}>
-        <Stack spacing={1.5} sx={{ flex: { lg: "0 0 32%" } }}>
+        <Stack spacing={1.5} sx={{ flex: { lg: "0 0 38%", xl: "0 0 40%" } }}>
           <Typography variant="subtitle2">Ticket subjects</Typography>
           <SupportTicketList
             error={state.listError ?? undefined}
@@ -53,7 +53,7 @@ export function SupportInboxScreen({
           />
         </Stack>
 
-        <Stack spacing={1.5} sx={{ flex: 1 }}>
+        <Stack spacing={1.5} sx={{ flex: 1, minWidth: 0 }}>
           <Typography variant="subtitle2">Ticket detail</Typography>
           <SupportTicketDetail
             createNote={state.createNote}

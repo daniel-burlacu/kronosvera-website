@@ -44,7 +44,7 @@ function PurgeControls({
   };
 
   return (
-    <Paper sx={{ borderRadius: 4, p: 2.5 }} variant="outlined">
+    <Paper sx={{ borderRadius: 2, p: 2.5 }} variant="outlined">
       <Stack spacing={1.5}>
         <Typography variant="subtitle2">Purge deleted tickets</Typography>
         <Typography color="text.secondary" variant="body2">
@@ -115,7 +115,7 @@ export function DeletedSupportPanel({
       ) : null}
 
       <Stack direction={{ xs: "column", lg: "row" }} spacing={2.5}>
-        <Stack spacing={1.5} sx={{ flex: { lg: "0 0 32%" } }}>
+        <Stack spacing={1.5} sx={{ flex: { lg: "0 0 38%", xl: "0 0 40%" } }}>
           <Typography variant="subtitle2">Deleted subjects</Typography>
           <SupportTicketList
             error={state.listError ?? undefined}
@@ -125,7 +125,7 @@ export function DeletedSupportPanel({
             selectedRequestId={state.selectedRequestId ?? undefined}
           />
         </Stack>
-        <Stack spacing={1.5} sx={{ flex: 1 }}>
+        <Stack spacing={1.5} sx={{ flex: 1, minWidth: 0 }}>
           <Typography variant="subtitle2">Deleted detail</Typography>
           <SupportTicketDetail
             createNote={async () => {}}

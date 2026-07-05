@@ -118,9 +118,13 @@ export const useSupportInbox = ({
     {},
   );
 
-  const loadRequests = useCallback(async (): Promise<void> => {
-    setListLoading(true);
-    setListError(null);
+  const loadRequests = useCallback(
+    async (options?: { silent?: boolean }): Promise<void> => {
+      const silent = options?.silent ?? false;
+      if (!silent) {
+        setListLoading(true);
+      }
+      setListError(null);
     try {
       const token = await getAccessToken();
       const nextRequests = await getSupportRequests(token, {
@@ -139,9 +143,13 @@ export const useSupportInbox = ({
           : "Failed to load support requests.",
       );
     } finally {
-      setListLoading(false);
+      if (!silent) {
+        setListLoading(false);
+      }
     }
-  }, [activeStatus, getAccessToken]);
+    },
+    [activeStatus, getAccessToken],
+  );
 
   useEffect(() => {
     if (!enabled) {
@@ -166,7 +174,7 @@ export const useSupportInbox = ({
     }
 
     const timer = setInterval(() => {
-      void loadRequests();
+      void loadRequests({ silent: true });
     }, SUPPORT_INBOX_POLL_INTERVAL_MS);
 
     return () => {

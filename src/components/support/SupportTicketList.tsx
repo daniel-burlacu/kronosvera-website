@@ -33,7 +33,7 @@ export function SupportTicketList({
 }: SupportTicketListProps) {
   if (loading) {
     return (
-      <Paper variant="outlined" sx={{ borderRadius: 4, p: 3 }}>
+      <Paper variant="outlined" sx={{ borderRadius: 2, p: 2.5 }}>
         <Typography color="text.secondary">
           Loading support requests…
         </Typography>
@@ -47,7 +47,7 @@ export function SupportTicketList({
 
   if (requests.length === 0) {
     return (
-      <Paper variant="outlined" sx={{ borderRadius: 4, p: 3 }}>
+      <Paper variant="outlined" sx={{ borderRadius: 2, p: 2.5 }}>
         <Typography color="text.secondary">
           No support requests are currently in this workflow tab.
         </Typography>
@@ -56,17 +56,26 @@ export function SupportTicketList({
   }
 
   return (
-    <Paper variant="outlined" sx={{ borderRadius: 4, overflow: "hidden" }}>
+    <Paper variant="outlined" sx={{ borderRadius: 2, overflow: "hidden" }}>
       <List disablePadding>
         {requests.map((request) => (
           <ListItemButton
             divider
             key={request.id}
             onClick={() => onSelect(request.id)}
+            sx={{ alignItems: "flex-start", py: 1.25 }}
             selected={request.id === selectedRequestId}
           >
             <ListItemText
               primary={request.subject}
+              primaryTypographyProps={{
+                sx: {
+                  lineHeight: 1.35,
+                  overflowWrap: "anywhere",
+                  whiteSpace: "normal",
+                },
+                variant: "body2",
+              }}
               secondary={
                 <Stack
                   component="span"

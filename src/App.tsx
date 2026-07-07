@@ -9,6 +9,7 @@ import { Screenshots } from './components/Screenshots';
 import { UpcomingFeatures } from './components/UpcomingFeatures';
 import { PrivacyPage } from './components/PrivacyPage';
 import { AccountDeletionPage } from './components/AccountDeletionPage';
+import { AppDownload } from './components/AppDownload';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <MessageSection />
       <UpcomingFeatures />
       <Screenshots />
+      <AppDownload />
       <Disclaimer />
       <PrivacyPage />
       <AccountDeletionPage />

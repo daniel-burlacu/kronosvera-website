@@ -21,7 +21,7 @@ export function Contact() {
             className="contact-logo"
           />
           <Typography variant="h2" sx={{ fontSize: { xs: 36, md: 52 }, mt: 3 }}>
-            Waiting to be released ...
+            Released for Android
           </Typography>
           <Typography
             color="text.secondary"

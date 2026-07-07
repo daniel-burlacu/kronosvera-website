@@ -16,8 +16,8 @@ export function Header() {
             <Box component="a" href="#account-deletion">Account Deletion</Box>
             <Box component="a" href="#contact">Contact</Box>
           </Stack>
-          <Button href="#contact" variant="contained" sx={{ borderRadius: 999, px: 2.4, background: 'linear-gradient(90deg, #18b84f, #f4c430, #ff9f1c, #ff4136)', boxShadow: 'none' }}>
-            Released for Android
+          <Button href="https://play.google.com/store/apps/details?id=com.kronosvera.app&hl=es_419" target="_blank" rel="noopener noreferrer" variant="contained" sx={{ borderRadius: 999, px: 2.4, background: 'linear-gradient(90deg, #18b84f, #f4c430, #ff9f1c, #ff4136)', boxShadow: 'none' }}>
+            Download App
           </Button>
         </Toolbar>
       </Container>
